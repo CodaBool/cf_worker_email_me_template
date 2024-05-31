@@ -2,6 +2,9 @@ import { AutoRouter, json } from 'itty-router'
 
 const router = AutoRouter()
 
+// the FROM name the recipient will see in their inbox
+const FROM_NAME = "email_bot"
+
 router.post('/', async (request, env) => {
   const url = new URL(request.url)
 	const subject = url.searchParams.get("subject")
@@ -17,8 +20,8 @@ router.post('/', async (request, env) => {
             to: [{ email: to, name }],
         }],
         from: {
-          email: "test@codabool.com",
-          name: "", // the FROM name the recipient will see in their inbox
+          email: `${FROM_NAME}@${env.DOMAIN}`,
+          name: FROM_NAME,
         },
         content: [{ type: 'text/plain', value: body }],
         subject,
