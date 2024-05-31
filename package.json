@@ -1,0 +1,17 @@
+{
+  "name": "test-cloudflare-emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "remote": "wrangler dev --remote"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "itty-router": "^5.0.17"
+  }
+}

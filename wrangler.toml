@@ -1,0 +1,4 @@
+name = "put_the_name_of_the_worker_here"
+main = "main.js"
+compatibility_date = "2023-10-30"
+# logpush = true
